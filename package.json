@@ -1,0 +1,15 @@
+{
+  "name": "mswjs-interceptors-passthrough-nodelay",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Minimal reproduction: @mswjs/interceptors passthrough sockets drop the client's setNoDelay(), adding ~40 ms per request",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "start": "node repro.mjs none && node repro.mjs interceptor",
+    "repro": "npm start"
+  },
+  "dependencies": {
+    "@mswjs/interceptors": "0.45.9"
+  }
+}
